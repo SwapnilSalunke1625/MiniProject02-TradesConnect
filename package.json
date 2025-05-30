@@ -1,0 +1,27 @@
+{
+  "name": "resource-connect",
+  "version": "1.0.0",
+  "description": "A web application to connect people with home service providers.",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:server": "cd backend && npm run dev",
+    "start:client": "cd frontend/tradeconnect && npm run dev",
+    "setup": "concurrently \"npm run install:server\" \"npm run install:client\"",
+    "install:server": "cd ./backend/ && npm i",
+    "install:client": "cd ./frontend/tradeconnect/ && npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.16",
+    "path": "^0.12.7",
+    "react-top-loading-bar": "^2.3.1",
+    "socket.io": "^4.8.1",
+    "url": "^0.11.4"
+  }
+}
